@@ -1,0 +1,295 @@
+/* Styling untuk Channel Banner */
+.banner-container {
+    position: relative;
+    background-color: #e0e0e0;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-img {
+    max-height: 250px;
+    object-fit: contain;
+}
+
+.banner-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #555;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.banner-text.left {
+    left: 20%;
+}
+
+.banner-text.right {
+    right: 20%;
+}
+
+
+/* Styling untuk Bagian Tombol Sosial Media */
+.social-buttons-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 1rem;
+}
+
+.social-btn {
+    border-radius: 9999px; /* Membuat tombol berbentuk lonjong */
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+}
+
+/* Warna latar belakang untuk setiap tombol */
+.social-btn.instagram {
+    background-color: #e4405f;
+}
+
+.social-btn.discord {
+    background-color: #5865f2;
+}
+
+.social-btn.twitter {
+    background-color: #1da1f2;
+}
+
+.social-btn.trello {
+    background-color: #0079bf;
+}
+
+.social-btn.tos {
+    background-color: #8e44ad;
+}
+
+/* CARD SECTION */
+.service-cards-container .card {
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-cards-container .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.service-cards-container .card-title {
+    margin-top: 1rem;
+    height: 3rem; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+}
+
+/* Mengatur tombol "Read More" agar tidak penuh */
+.service-cards-container .card-footer {
+    background-color: transparent;
+    border-top: none; 
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.service-cards-container .card-footer .btn {
+    width: auto;
+    padding: 0.5rem 1.5rem;
+}
+
+/* Mengatur tampilan video per kartu */
+.service-card-video-single {
+    width: 100%;
+    height: 150px; /* Atur tinggi tetap untuk konsistensi */
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.service-card-video-single video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Penting untuk memastikan video mengisi area tanpa distorsi */
+    border-radius: 0.5rem;
+}
+
+/* ==== ANIMASI MASUK (Fade + Slide) ==== */
+.animated-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animated-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==== ANIMASI KLIK PADA CARD ==== */
+.service-cards-container .card {
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.service-cards-container .card:active {
+    transform: scale(0.95); /* mengecil saat ditekan */
+}
+
+
+/* FOOTER SECTION */
+.footer {
+    padding: 4rem 0;
+    background:var(--secondaryBackgroundColor) ;
+    text-align: center;
+}
+
+.footer-icons {
+    margin-bottom: 1rem;
+}
+
+.footer-icons a {
+    margin: 0 0.5rem;
+}
+
+.footer-icons svg {
+    fill: #3e3f40;
+}
+
+.footer-icons a:hover svg {
+    fill: #000;
+}
+
+/* ---- Animasi Muncul Saat Scroll ---- */
+.animated-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animated-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---- Animasi Saat Diklik (Pada Tombol) ---- */
+.btn:active, .social-btn:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+}
+
+/* --- Styling Tambahan untuk menjaga konsistensi --- */
+.service-cards-container .card {
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-cards-container .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.service-cards-container .card-title {
+    margin-top: 1rem;
+    height: 3rem; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+}
+
+.service-cards-container .card-footer {
+    background-color: transparent;
+    border-top: none; 
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.service-cards-container .card-footer .btn {
+    width: auto;
+    padding: 0.5rem 1.5rem;
+}
+
+.service-card-video-single {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.service-card-video-single video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+/* --- Styling untuk Copyright Bar --- */
+.text-center.py-4 {
+    background-color: #343a40; /* Warna latar belakang gelap */
+    color: white; /* Warna teks putih */
+    padding: 1.5rem 0; /* Jarak atas dan bawah */
+}
+
+.text-center.py-4 p {
+    margin-bottom: 0;
+}
+
+/* ---- Media Queries untuk Responsif ---- */
+
+/* Layar sangat kecil (ponsel) */
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    .form-control {
+        width: 100px;
+    }
+    .rounded-circle {
+        width: 120px !important;
+        height: 120px !important;
+    }
+    .social-btn {
+        display: block;
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+    .service-card-video-single {
+        height: 120px;
+    }
+}
+
+/* Layar tablet */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .social-btn {
+        font-size: 0.9rem;
+    }
+    .service-card-video-single {
+        height: 150px;
+    }
+}
+
+/* Layar desktop (layar besar) */
+@media (min-width: 992px) {
+    .social-btn-section {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
